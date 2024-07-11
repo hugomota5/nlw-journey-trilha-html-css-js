@@ -8,16 +8,23 @@ h1 {
     font-weight: bolder;
 }
 
+span,
+time,
+p {
+    line-height: 140%;
+    letter-spacing: -2%;
+}
+
 span {
     color: #F4F4F5;
     font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -2%;
 }
 
 time {
     color: #A1A1AA;
     font-size: 14px;
-    line-height: 140%;
-    letter-spacing: -2%;
+}
+
+p {
+    color: #71717A;
 }
