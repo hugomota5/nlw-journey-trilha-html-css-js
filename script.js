@@ -1,8 +1,8 @@
-// object {}
+// objeto {}
 const atividade = {
   // propriedade+valor
   nome: "Almoço",
-  // colocar data formato americano
+  // data no formato americano
   data: new Date("2024-07-08 10:00"),
   finalizada: false,
 };
@@ -11,17 +11,18 @@ const atividade = {
 let atividades = [
   atividade,
   {
-    nome: "Acedemia em grupo",
+    nome: "Academia em grupo",
     data: new Date("2024-07-09 12:00"),
     finalizada: false,
   },
   {
-    nome: "Gamming session",
+    nome: "Gaming session",
     data: new Date("2024-07-09 16:00"),
     finalizada: true,
   },
 ];
-// criando função - arrow function - sequencia de código
+
+// criando função - arrow function - sequência de código
 const criarItemDeAtividade = (atividade) => {
   // lógica
   let input = '<input type="checkbox" ';
@@ -31,19 +32,21 @@ const criarItemDeAtividade = (atividade) => {
   }
   input += " />";
   //   alert(input)
-  // troca usando ${objeto.atributo} *interpolação
+  // interpolação usando ${objeto.atributo}
   return `<div>
-            ${input}
-            <span>${atividade.nome}</span>
-            <time>${atividade.data}</time>
-        </div>`;
+              ${input}
+              <span>${atividade.nome}</span>
+              <time>${atividade.data}</time>
+          </div>`;
 };
+
 // Processamento e apresentação de dados
-// Pegando elemento section e atribuindo a variável
+// Pegando elemento section e atribuindo à variável
 const section = document.querySelector("section");
+
 // estrutura de repetição
 for (let atividade of atividades) {
   // Manipulando/Trabalhando com o HTML - objeto section
-  // encurtador de contatenação "+=" = "o mesmo concatena com a mesma coisa"
+  // encurtador de concatenação "+=" = "o mesmo concatena com a mesma coisa"
   section.innerHTML += criarItemDeAtividade(atividade);
 }
